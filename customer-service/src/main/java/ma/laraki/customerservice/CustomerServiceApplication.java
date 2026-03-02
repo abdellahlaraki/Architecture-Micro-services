@@ -1,13 +1,16 @@
 package ma.laraki.customerservice;
 
+import ma.laraki.customerservice.config.CustomerConfigParams;
 import ma.laraki.customerservice.entities.Customer;
 import ma.laraki.customerservice.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@EnableConfigurationProperties(CustomerConfigParams.class)
 public class CustomerServiceApplication {
 
 	public static void main(String[] args) {
